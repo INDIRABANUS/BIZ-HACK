@@ -472,7 +472,7 @@ frontend/.env
 Development configuration:
 
 ```env
-VITE_API_BASE_URL=/api
+VITE_API_URL=http://localhost:5000/api
 ```
 
 Start frontend:
@@ -580,7 +580,7 @@ CLIENT_URL=your_frontend_url
 ### Frontend
 
 ```env
-VITE_API_BASE_URL=your_backend_api_url
+VITE_API_URL=your_backend_api_url
 ```
 
 > **Never commit `.env` files, database credentials, JWT secrets, or other sensitive configuration to GitHub.**

@@ -53,22 +53,22 @@ This system provides a centralized platform to:
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](docs/screenshots/home.png)
+![Home Page](demo_imgs/image.png)
 
 ### Login
-![Login](docs/screenshots/login.png)
+![Login](demo_imgs/image%20copy.png)
 
 ### Donor Registration
-![Registration](docs/screenshots/register.png)
+![Registration](demo_imgs/image%20copy%204.png)
 
 ### Donor Search
-![Donor Search](docs/screenshots/donor-search.png)
+![Donor Search](demo_imgs/image%20copy%203.png)
 
 ### Donor Profile
-![Donor Profile](docs/screenshots/donor-profile.png)
+![Donor Profile](demo_imgs/image%20copy%206.png)
 
 ### Admin Dashboard
-![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+![Admin Dashboard](demo_imgs/image%20copy%202.png)
 
 ---
 
@@ -174,24 +174,3 @@ BIZ HACK'26
 Developed for the BIZ HACK hackathon.
 
 
-DEMO IMAGES
-
-## 📸 Screenshots
-
-### Home Page
-![Home Page](demo_imgs/image.png)
-
-### Login Page
-![Login Page](demo_imgs/image%20copy.png)
-
-### Registration Page
-![Registration Page](demo_imgs/image%20copy%204.png)
-
-### Donor Search
-![Donor Search](demo_imgs/image%20copy%203.png)
-
-### Donor Profile
-![Donor Profile](demo_imgs/image%20copy%206.png)
-
-### Admin Dashboard
-![Admin Dashboard](demo_imgs/image%20copy%202.png)

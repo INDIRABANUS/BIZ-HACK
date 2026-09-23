@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { Mail, Lock, LogIn, AlertCircle, Droplet, Shield, Zap } from 'lucide-react';
+import React, { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import {
+  Mail,
+  Lock,
+  LogIn,
+  AlertCircle,
+  Droplet,
+  Shield,
+  Zap,
+} from "lucide-react";
 
 const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const from = location.state?.from?.pathname;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     if (!email || !password) {
-      setError('Please provide both email and password.');
+      setError("Please provide both email and password.");
       return;
     }
 
@@ -29,15 +37,16 @@ const Login = () => {
       const data = await login(email, password);
       if (from) {
         navigate(from, { replace: true });
-      } else if (data.user.role === 'ADMIN') {
-        navigate('/admin', { replace: true });
+      } else if (data.user.role === "ADMIN") {
+        navigate("/admin", { replace: true });
       } else {
-        navigate('/profile', { replace: true });
+        navigate("/profile", { replace: true });
       }
     } catch (err) {
-      console.error('Login error:', err);
+      console.error("Login error:", err);
       setError(
-        err.response?.data?.message || 'Login failed. Please verify your credentials.'
+        err.response?.data?.message ||
+          "Login failed. Please verify your credentials.",
       );
     } finally {
       setLoading(false);
@@ -47,7 +56,7 @@ const Login = () => {
   const handleQuickFill = (demoEmail, demoPass) => {
     setEmail(demoEmail);
     setPassword(demoPass);
-    setError('');
+    setError("");
   };
 
   return (
@@ -65,25 +74,30 @@ const Login = () => {
             Sign in to manage your donor profile or administrative tasks.
           </p>
         </div>
-
         {/* Demo Fast Logins for Judges / Hackathon Review */}
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2.5">
           <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 uppercase tracking-wider">
             <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
             <span>Hackathon Demo Quick Fill</span>
           </div>
+
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              onClick={() => handleQuickFill('admin@bizhack.com', 'Admin@123')}
+              onClick={() =>
+                handleQuickFill("admin@bizhack.demo", "Admin@2026")
+              }
               className="px-2.5 py-2 text-xs font-bold rounded-xl bg-purple-100 text-purple-800 hover:bg-purple-200 border border-purple-200 transition-colors flex items-center justify-center gap-1.5"
             >
               <Shield className="w-3.5 h-3.5" />
               <span>Admin Demo</span>
             </button>
+
             <button
               type="button"
-              onClick={() => handleQuickFill('rajesh.erode@bizhack.com', 'Donor@123')}
+              onClick={() =>
+                handleQuickFill("rajesh.erode@bizhack.com", "Donor@2026")
+              }
               className="px-2.5 py-2 text-xs font-bold rounded-xl bg-red-100 text-red-800 hover:bg-red-200 border border-red-200 transition-colors flex items-center justify-center gap-1.5"
             >
               <Droplet className="w-3.5 h-3.5" />
@@ -161,8 +175,11 @@ const Login = () => {
 
         {/* Footer Link */}
         <div className="text-center text-xs text-slate-500 pt-2 border-t border-slate-100">
-          Don't have an account yet?{' '}
-          <Link to="/register" className="font-bold text-red-600 hover:underline">
+          Don't have an account yet?{" "}
+          <Link
+            to="/register"
+            className="font-bold text-red-600 hover:underline"
+          >
             Register as a Donor
           </Link>
         </div>

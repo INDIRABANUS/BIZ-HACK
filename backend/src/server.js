@@ -19,7 +19,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: '*', // Allows frontend deployment across any URL or local port
+  origin: process.env.CLIENT_URL || '*',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));

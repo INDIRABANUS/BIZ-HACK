@@ -172,3 +172,26 @@ Database credentials and secrets are stored in environment variables.
 BIZ HACK'26
 
 Developed for the BIZ HACK hackathon.
+
+
+DEMO IMAGES
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](demo_imgs/image.png)
+
+### Login Page
+![Login Page](demo_imgs/image%20copy.png)
+
+### Registration Page
+![Registration Page](demo_imgs/image%20copy%204.png)
+
+### Donor Search
+![Donor Search](demo_imgs/image%20copy%203.png)
+
+### Donor Profile
+![Donor Profile](demo_imgs/image%20copy%206.png)
+
+### Admin Dashboard
+![Admin Dashboard](demo_imgs/image%20copy%202.png)
